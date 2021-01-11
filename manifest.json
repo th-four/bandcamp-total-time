@@ -1,0 +1,28 @@
+{
+    "manifest_version": 2,
+    "name": "Bandcamp Total Time",
+    "version": "1.0",
+    "description": "Display the total playing time of a Bandcamp album",
+    "icons": {
+	"48":"logo.png"
+    },
+    "permissions": [
+      "unlimitedStorage",
+      "storage",
+      "webRequest",
+      "webRequestBlocking",
+      "<all_urls>"
+    ],
+    "background": {
+	"scripts":[
+	    "background.js"
+	]
+    },
+
+    "content_scripts": [
+	{
+	    "matches": ["*://*.bandcamp.com/*"],
+	    "js": ["totaltime.js"]
+	}
+    ]
+}
