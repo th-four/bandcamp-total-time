@@ -7,11 +7,9 @@
 	"48":"logo.png"
     },
     "permissions": [
-      "unlimitedStorage",
       "storage",
       "webRequest",
-      "webRequestBlocking",
-      "<all_urls>"
+      "webRequestBlocking"
     ],
     "background": {
 	"scripts":[
