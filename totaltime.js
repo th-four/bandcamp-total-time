@@ -1,10 +1,17 @@
-// won't work for times over 1h -> todo
 function timestrToSec(timestr) {
   var parts = timestr.split(":");
-/*  return (parts[0] * 3600) +
-         (parts[1] * 60) +
-         (+parts[2]);*/
-    return (parseInt(parts[0], 10)*60 + parseInt(parts[1], 10));
+    if (parts.length == 3){
+    	console.log("Over an hour");
+    	var hours = parts[0];
+    	var minutes = parts[1];
+    	var seconds = parts[2];
+    } else {
+    	console.log("Under an hour")
+    	var hours = 0;
+	var minutes = parts[0];
+	var seconds = parts[1];
+    }
+    return (parseInt(hours, 10)*3600 + parseInt(minutes, 10)*60 + parseInt(seconds, 10));
 }
 
 function pad(num) {
